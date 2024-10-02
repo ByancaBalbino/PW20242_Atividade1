@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% set titulo="Cadastro" %}
+{% set css_cadastro = "active" %}
+
+{% block conteudo %}
+<form action="/post_cadastro" method="post">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do produto" required>
+    </div>
+    <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Digite a descrição do produto" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="estoque" class="form-label">Estoque</label>
+        <input type="number" class="form-control" id="estoque" name="estoque" placeholder="Digite a quantidade em estoque" required>
+    </div>
+    <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+        <input type="text" class="form-control" id="preco" name="preco" placeholder="Digite o preço do produto" required>
+    </div>
+    <div class="mb-3">
+        <label for="categoria" class="form-label">Categoria</label>
+        <select class="form-select" id="categoria" name="categoria" required>
+            <option selected>Selecione uma categoria</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="limpeza">Limpeza</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="brinquedos">Brinquedos</option>
+            <option value="vestuario">Vestuário</option>
+            <option value="automotivo">Automotivo</option>
+            <option value="esporte_lazer">Esporte & Lazer</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-dark btn-lg" type="submit">Cadastrar</button>
+    </div>
+</form>
+{% endblock %}
