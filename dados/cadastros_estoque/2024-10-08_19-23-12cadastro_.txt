@@ -1,0 +1,5 @@
+Nome: morango
+Descrição: fruta
+Estoque:30
+Senha:15
+Categoria:Alimentos
