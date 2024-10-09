@@ -1,5 +1,0 @@
-Nome: pão
-Descrição: massa
-Estoque:40
-Senha:2
-Categoria:Alimentos
